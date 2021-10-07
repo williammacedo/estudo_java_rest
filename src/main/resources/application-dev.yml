@@ -1,0 +1,26 @@
+logging:
+  level:
+    com:
+      williammacedo:
+        uber_clone: DEBUG
+
+spring:
+  datasource:
+    url: jdbc:h2:file:C:\Users\willi\desenv\workspace_estudo\H2_DATABASE\uber_clone;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+    username: uber_clone
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+server:
+  error:
+    include-message: always
